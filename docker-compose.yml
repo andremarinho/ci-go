@@ -1,0 +1,11 @@
+version: "3.9"  # Versão do Docker Compose
+
+services:
+  golang:
+    image: golang:1.22  # Imagem do Go
+    working_dir: /app  # Define o diretório de trabalho dentro do container
+    volumes:
+      - ./:/app  # Mapeia o diretório atual do host para /app no container
+    tty: true  # Aloca um pseudo-TTY 
+    stdin_open: true  # Mantém o STDIN aberto mesmo se não anexado
+    command: tail -f /dev/null  # Comando para manter o container em execução
