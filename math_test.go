@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestSoma(t *testing.T) {
+func Testsoma(t *testing.T) {
 
 	resultado := soma(10, 10)
 
